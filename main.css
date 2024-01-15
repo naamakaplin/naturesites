@@ -1,0 +1,565 @@
+html {
+  /* for the scrolling of the about us */
+  scroll-behavior: smooth;
+}
+body {
+  height: 1000%;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(14, 13, 13);
+  background-color: #2a5470;
+  background-image: linear-gradient(to bottom right, #ffffff, #2a5470);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.header {
+  min-width: 100vh;
+  width: 100%;
+  height: 700px;
+  background-image: linear-gradient(
+      rgba(25, 66, 228, 0.7),
+      rgba(233, 233, 233, 0.7)
+    ),
+    url(https://img.mako.co.il/2019/07/14/547080_I.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+.links {
+  flex: 1;
+  text-align: right;
+}
+
+.links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.links ul li:hover::after {
+  width: 100%;
+}
+.the_enter {
+  width: 65%;
+  color: bisque;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.the_enter h1 {
+  font-size: 62px;
+}
+.the_enter p {
+  margin: 10px 0 40px;
+  font-size: 17px;
+}
+.learn_more {
+  display: inline-block;
+  text-decoration: none;
+  color: bisque;
+  border: 1px solid bisque;
+  padding: 12px 34px;
+  font-size: 17px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.learn_more:hover {
+  border: #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+/*-------- wars-------------- */
+.wars_title h1 {
+  font-size: 50px;
+}
+.wars {
+  position: absolute;
+  padding-inline: 3%;
+  /* margin: auto; */
+  text-align: center;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+#warsh {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: -20px;
+}
+.wars_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.war_style {
+  width: 30%;
+  height: 350px;
+  border: solid 3px rgb(222, 221, 221);
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  /* all the input will be in the div */
+  overflow: hidden;
+}
+.war_style img {
+  width: 100%;
+}
+.war_input {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.war_input:hover {
+  background: linear-gradient(rgba(255, 0, 0, 0.7), rgba(233, 233, 233, 0.7));
+}
+.war_input h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 26px;
+  bottom: 0%;
+  position: absolute;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  opacity: 0;
+  transition: 0.5s;
+}
+.war_input h3 p {
+  font-weight: 300;
+  font-size: 19px;
+}
+.war_input:hover h3 {
+  opacity: 1;
+  bottom: 50%;
+}
+#war7 {
+  margin-left: 240px;
+}
+#war8 {
+  margin-right: 240px;
+}
+/* -------------wars page------------- */
+.war-header {
+  height: 30vh;
+  width: 100%;
+  position: fixed;
+  /* be on the other sections */
+  z-index: 10;
+  top: 0px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url(https://www.inss.org.il/he/wp-content/uploads/sites/2/2019/07/39988474012_4f10815276_o-%D7%93%D7%97%D7%95%D7%A1.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: aliceblue;
+}
+.ourwars {
+  position: absolute;
+  padding-inline: 3%;
+
+  text-align: center;
+  margin-top: 40vh;
+}
+.p_wars {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.578);
+}
+
+/* -------------timeline------------- */
+.time-line-body {
+  height: 1500px;
+  font-family: sans-serif;
+
+  color: rgb(14, 13, 13);
+  background-color: #2a5470;
+  background-image: linear-gradient(to bottom right, #ffffff, #2a5470);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 300px 100px 200px;
+}
+.timeline::after {
+  position: absolute;
+  z-index: 8;
+  content: " ";
+  background-color: #000;
+  width: 2px;
+  height: 100%;
+  left: calc(50% + 50px);
+  top: 0%;
+  animation: moving 8s linear forwards;
+}
+@keyframes moving {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.section {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.section:nth-child(2) {
+  animation-delay: 1s;
+}
+.section:nth-child(3) {
+  animation-delay: 2s;
+}
+.section:nth-child(4) {
+  animation-delay: 3s;
+}
+.section:nth-child(5) {
+  animation-delay: 4s;
+}
+.section:nth-child(6) {
+  animation-delay: 5s;
+}
+.section:nth-child(7) {
+  animation-delay: 6s;
+}
+.section:nth-child(8) {
+  animation-delay: 7s;
+}
+
+.content {
+  padding: 20px 30px;
+  border: 2px solid rgb(212, 195, 195);
+
+  position: relative;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.content:hover {
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.section:nth-child(odd) {
+  left: -50px;
+}
+.section:nth-child(even) {
+  left: calc(50% + 50px);
+}
+.point {
+  background-color: black;
+  border-radius: 50%;
+  width: 1rem;
+  padding: 0.5rem 0;
+
+  position: absolute;
+  right: -10px;
+  top: 32px;
+  z-index: 8;
+}
+.section:nth-child(even) .point {
+  left: -7px;
+}
+.content h2 {
+  font-weight: 600;
+}
+.content small {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.section:nth-child(odd) span {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 2;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-left: 15px solid rgb(212, 195, 195);
+  right: 35px;
+}
+/* the white triangulars , conected to every item from the sides */
+.section:nth-child(even) span {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 2;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-right: 15px solid rgb(212, 195, 195);
+  left: 35px;
+}
+
+.slider-time {
+  display: flex;
+  place-items: center;
+}
+.timetable {
+  padding-bottom: 100px;
+  width: 90%;
+  position: relative;
+  height: 110px;
+  place-items: center;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+}
+.timetable tr {
+  animation: scrolling 30s linear infinite;
+  display: flex;
+  width: 3936px;
+  padding: 0%;
+  border: 10px solid #ffffff;
+  background-color: #ffffff;
+}
+td {
+  display: flex;
+  padding: 0%;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-3936px + 100vw));
+  }
+}
+/* -------------operations------------ */
+
+.limitary {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.all-operations {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 250px;
+}
+.all-operations .p_operations {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.578);
+}
+.row {
+  display: grid;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px auto);
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  overflow: hidden;
+}
+.lm a {
+  text-decoration: none;
+  color: #000;
+}
+.lm {
+  border-radius: 10px;
+  margin: 5% 3%;
+  text-align: center;
+}
+.lm:hover {
+  box-shadow: 0px 0px 10px black;
+}
+.lm img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+}
+.lm p {
+  padding: 0;
+}
+.lm h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contect_us {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(
+      rgba(25, 66, 228, 0.7),
+      rgba(233, 233, 233, 0.7)
+    ),
+    url(pictures/contect.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.contect_us h1 {
+  color: bisque;
+  margin-bottom: 40px;
+  padding: 0;
+}
+@media (max-width: 700px) {
+  .contect_us h1 {
+    font-size: 24px;
+  }
+}
+.about_us {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+.about_us h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+/* ---------operations page------ */
+.all-operations {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 250px;
+}
+.all-operations .p_operations {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.578);
+}
+/* -----------contact page------------ */
+.contact-body {
+  height: 1200px;
+  font-family: sans-serif;
+
+  color: rgb(14, 13, 13);
+  background-color: #2a5470;
+  background-image: linear-gradient(to bottom right, #ffffff, #2a5470);
+}
+.section-contact {
+  height: 100vh;
+  width: 100%;
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container-contact {
+  width: 90%;
+  max-width: 500px;
+  margin: 700px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px black;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+}
+textarea {
+  resize: vertical;
+}
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "Monserrat";
+  color: rgb(86, 157, 185);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button[type="submit"]:hover {
+  background-color: snow;
+}
+/* #status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: lightgreen;
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: red;
+  color: seashell;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+} */
